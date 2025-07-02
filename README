@@ -6,6 +6,8 @@
 
 2. Download:
 
+  devtools::install_github("Youngho-Cha/Submission-package-using-R")
+
 3. Example:
 
   library(submission.package)
