@@ -1,10 +1,8 @@
-
 [An R package to calculate diagnostic performance metrics for IVD clinical trials]
 
 1. Purpose:
 
-  This package helps users compute key diagnostic performance metrics such as sensitivity,
-  specificity, PPV, NPV, accuracy, and AUC, including their confidence intervals.
+  This package helps users compute key diagnostic performance metrics such as sensitivity,specificity, PPV, NPV, accuracy, and AUC, including their confidence intervals.
 
 2. Download:
 
@@ -25,8 +23,7 @@
 
 4. Function:
 
-  (1) calc_performance_metrics(actual,predicted,score,metrics_to_calc,
-                               ci_method_binary,ci_method_auc,alpha,boot_n):
+  (1) calc_performance_metrics(actual,predicted,score,metrics_to_calc,ci_method_binary,ci_method_auc,alpha,boot_n):
 
     Calculates key performance metrics including sensitivity, specificity,
     positive predictive value (PPV), negative predictive value (NPV), accuracy,
@@ -40,7 +37,6 @@
       - ci_method_auc: the method used to calculate the confidence interval for AUC (default=DeLong's Method)
       - alpha: the significance level used to compute 100(1−α)% confidence intervals (default=0.05)
       - boot_n: the number of bootstrap samples used when computing the AUC confidence interval using the bootstrap method (default=2000)
-
 
   (2) format_performance_output(metrics):
 
