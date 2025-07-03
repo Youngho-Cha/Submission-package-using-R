@@ -32,7 +32,6 @@ format_for_reporting=function(df,digits=3){
 #'
 #' @return A list of confidence interval(lower/upper)
 #'
-#' @noRd
 calculate_wald_ci=function(alpha,n,p_hat){
   z=qnorm(1-alpha/2)
 
@@ -55,7 +54,6 @@ calculate_wald_ci=function(alpha,n,p_hat){
 #'
 #' @return A list of confidence interval(lower/upper)
 #'
-#' @noRd
 calculate_wilson_ci=function(alpha,n,p_hat){
   z=qnorm(1-alpha/2)
 
