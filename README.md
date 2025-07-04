@@ -27,9 +27,7 @@ devtools::install_github("Youngho-Cha/Submission-package-using-R")
 
 ---
 
-## ✅ 3. Example code
-
-### 💡 Example Usage
+## 💡 Example Usage
 
 ```r
 library(submission.package)
@@ -49,22 +47,20 @@ save_performance_report(report_ready, format = "csv")
 
 ---
 
-## ✅ 4. Function 
+## ⚙️ Functions
 
-### ⚙️ Functions
-
-#### 🔹 1. `calc_performance_metrics()`
+### 🔹 1. `calc_performance_metrics()`
 
 Calculates key performance metrics and their confidence intervals.
 
 **Usage:**
 ```r
 calc_performance_metrics(actual, predicted, score, 
-                         metrics_to_calc, 
-                         ci_method_binary, 
-                         ci_method_auc, 
-                         alpha, 
-                         boot_n)
+                         metrics_to_calc = c("sensitivity","specificity","ppv","npv","accuracy","auc"), 
+                         ci_method_binary = "cp",
+                         ci_method_auc = "delong", 
+                         alpha = 0.05, 
+                         boot_n = 2000)
 ```
 
 **Arguments:**
@@ -77,6 +73,36 @@ calc_performance_metrics(actual, predicted, score,
 * alpha: significance level (default = 0.05)
 * boot_n: number of bootstrap iterations for AUC (default = 2000)
 
+### 🔹 2. `format_performance_output()`
 
+Formats the output of `calc_performance_metrics()` into an easy-to-read table.
 
+**Usage:**
+```r
+format_performance_output(metrics)
+```
 
+**Arguments:**
+* metrics: the output from the calc_performance_metrics() function containing the calculated performance metric values
+
+### 🔹 3. save_performance_report()
+
+Saves the formatted performance metrics table to a specified file.
+
+**Usage:**
+```r
+save_performance_report(results_df, format = "csv", outdir = "results", filename = NULL)
+```
+
+**Arguments:**
+* results_df: the tabular data formatted using the format_for_reporting() function
+* format: file format to save (e.g., csv, xlsx) (default = "csv")
+* outdir: name of the output directory where the file will be saved (default = "results")
+* filename: name of the output file (default = NULL)
+
+---
+
+## 📬 Contact
+
+* Author: Youngho Cha
+* Email: cswer123@naver.com
