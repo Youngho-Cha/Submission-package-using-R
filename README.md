@@ -93,7 +93,7 @@ format_performance_output(metrics)
 
 ### 🔹 3. save_performance_report()
 
-Saves the formatted performance metrics table to a specified file.
+Saves the formatted output of `format_performance_metrics()` to a specified file.
 
 **Usage:**
 ```r
