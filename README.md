@@ -25,6 +25,12 @@ Install the package directly from GitHub using:
 devtools::install_github("Youngho-Cha/Submission-package-using-R")
 ```
 
+or
+
+```r
+remotes::install_github("Youngho-Cha/Submission-package-using-R")
+```
+
 ---
 
 ## 💡 Example Usage
