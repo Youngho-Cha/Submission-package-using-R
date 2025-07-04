@@ -70,14 +70,14 @@ calc_performance_metrics(actual, predicted, score,
 ```
 
 **Arguments:**
-* 'actual': the true class label of each observation
-* 'predicted': the predicted class label
-* 'score': the predicted score (e.g., probability)
-* 'metrics_to_calc': which metrics to calculate (default = all)
-* 'ci_method_binary': method for CI of binary metrics (default = Clopper-Pearson)
-* 'ci_method_auc': method for CI of AUC (default = DeLong)
-* 'alpha': significance level (default = 0.05)
-* 'boot_n': number of bootstrap iterations for AUC (default = 2000)
+* actual: the true class label of each observation
+* predicted: the predicted class label
+* score: the predicted score (e.g., probability)
+* metrics_to_calc: which metrics to calculate (default = all)
+* ci_method_binary: method for CI of binary metrics (default = Clopper-Pearson)
+* ci_method_auc: method for CI of AUC (default = DeLong)
+* alpha: significance level (default = 0.05)
+* boot_n: number of bootstrap iterations for AUC (default = 2000)
 
 ### 🔹 2. `format_performance_output()`
 
@@ -89,7 +89,7 @@ format_performance_output(metrics)
 ```
 
 **Arguments:**
-* 'metrics': the output from the calc_performance_metrics() function containing the calculated performance metric values
+* **'metrics'**: the output from the calc_performance_metrics() function containing the calculated performance metric values
 
 ### 🔹 3. save_performance_report()
 
@@ -101,10 +101,10 @@ save_performance_report(results_df, format = "csv", outdir = "results", filename
 ```
 
 **Arguments:**
-* 'results_df': the tabular data formatted using the format_for_reporting() function
-* 'format': file format to save (e.g., csv, xlsx) (default = "csv")
-* 'outdir': name of the output directory where the file will be saved (default = "results")
-* 'filename': name of the output file (default = NULL)
+* results_df: the tabular data formatted using the format_for_reporting() function
+* format: file format to save (e.g., csv, xlsx) (default = "csv")
+* outdir: name of the output directory where the file will be saved (default = "results")
+* filename: name of the output file (default = NULL)
 
 ---
 
