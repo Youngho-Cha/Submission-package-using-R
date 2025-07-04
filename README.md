@@ -62,7 +62,7 @@ Calculates key performance metrics and their confidence intervals.
 **Usage:**
 ```r
 calc_performance_metrics(actual, predicted, score, 
-                         metrics_to_calc = c("sensitivity","specificity","ppv","npv","accuracy","auc"), 
+                         metrics_to_calc = c("sensitivity", "specificity", "ppv", "npv", "accuracy", "auc"), 
                          ci_method_binary = "cp",
                          ci_method_auc = "delong", 
                          alpha = 0.05, 
@@ -72,12 +72,12 @@ calc_performance_metrics(actual, predicted, score,
 **Arguments:**
 * actual: the true class label of each observation
 * predicted: the predicted class label
-* score: the predicted score (e.g., probability)
-* metrics_to_calc: which metrics to calculate (default = all)
-* ci_method_binary: method for CI of binary metrics (default = Clopper-Pearson)
-* ci_method_auc: method for CI of AUC (default = DeLong)
+* score: the predicted score
+* metrics_to_calc: which metrics to calculate (default = all metrics)
+* ci_method_binary: method for CI of binary metrics (e.g., cp, wilson, wald) (default = Clopper-Pearson)
+* ci_method_auc: method for CI of AUC (e.g., delong, bootstrap) (default = DeLong)
 * alpha: significance level (default = 0.05)
-* boot_n: number of bootstrap iterations for AUC (default = 2000)
+* boot_n: number of iterations for bootstrap method (default = 2000)
 
 ### 🔹 2. `format_performance_output()`
 
