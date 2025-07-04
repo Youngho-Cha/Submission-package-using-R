@@ -1,5 +1,7 @@
 # An R package to calculate diagnostic performance metrics for IVD clinical trials
 
+---
+
 ## 🎯 Purpose
 
 This package helps users compute key diagnostic performance metrics such as:
@@ -12,6 +14,8 @@ This package helps users compute key diagnostic performance metrics such as:
 - **Area Under the Curve (AUC)**
 
 It also calculates **100(1−α)% confidence intervals** for each metric.
+
+---
 
 ## 📥 Installation
 
@@ -65,11 +69,12 @@ calc_performance_metrics(actual, predicted, score,
 ```
 **Arguments**:
 
-*actual: the true class label of each observation
-*predicted: the predicted class label
-*score: the predicted score (e.g., probability)
-*metrics_to_calc: which metrics to calculate (default = all)
-*ci_method_binary: method for CI of binary metrics (default = Clopper-Pearson)
-*ci_method_auc: method for CI of AUC (default = DeLong)
-*alpha: significance level (default = 0.05)
+* actual: the true class label of each observation
+* predicted: the predicted class label
+* score: the predicted score (e.g., probability)
+* metrics_to_calc: which metrics to calculate (default = all)
+** options : 
+* ci_method_binary: method for CI of binary metrics (default = Clopper-Pearson)
+* ci_method_auc: method for CI of AUC (default = DeLong)
+* alpha: significance level (default = 0.05)
 * boot_n: number of bootstrap iterations for AUC (default = 2000)
