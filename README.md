@@ -27,10 +27,9 @@ devtools::install_github("Youngho-Cha/Submission-package-using-R")
 
 ---
 
-### ✅ 3. Example code
+## ✅ 3. Example code
 
-```markdown
-## 💡 Example Usage
+### 💡 Example Usage
 
 ```r
 library(submission.package)
@@ -50,11 +49,11 @@ save_performance_report(report_ready, format = "csv")
 
 ---
 
-### ✅ 4. Function 
+## ✅ 4. Function 
 
-## ⚙️ Functions
+### ⚙️ Functions
 
-### 🔹 1. `calc_performance_metrics()`
+#### 🔹 1. `calc_performance_metrics()`
 
 Calculates key performance metrics and their confidence intervals.
 
@@ -67,14 +66,17 @@ calc_performance_metrics(actual, predicted, score,
                          alpha, 
                          boot_n)
 ```
-**Arguments**:
 
+**Arguments:**
 * actual: the true class label of each observation
 * predicted: the predicted class label
 * score: the predicted score (e.g., probability)
 * metrics_to_calc: which metrics to calculate (default = all)
-** options : 
 * ci_method_binary: method for CI of binary metrics (default = Clopper-Pearson)
 * ci_method_auc: method for CI of AUC (default = DeLong)
 * alpha: significance level (default = 0.05)
 * boot_n: number of bootstrap iterations for AUC (default = 2000)
+
+
+
+
