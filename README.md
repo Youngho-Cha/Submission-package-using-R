@@ -89,7 +89,7 @@ format_performance_output(metrics)
 ```
 
 **Arguments:**
-* **'metrics'**: the output from the calc_performance_metrics() function containing the calculated performance metric values
+- **'metrics'**: the output from the calc_performance_metrics() function containing the calculated performance metric values
 
 ### 🔹 3. save_performance_report()
 
